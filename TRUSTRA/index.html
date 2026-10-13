@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e6f0f8">
+  <title>TRUSTRA | Link Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="TRUSTRA home"><span class="brand-mark">T</span><span>TRUSTRA</span></a>
+    <div class="center-label"><span class="live-dot"></span> LINK INTELLIGENCE CENTER</div>
+    <div class="privacy-pill"><span>◇</span> PRIVACY FIRST</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> DIGITAL TRUST WORKSPACE</div>
+        <h1>Know the link<br>before you <span>click.</span></h1>
+        <p class="hero-description">Suspicious link? Don't guess. Inspect its structure, understand the warning signs, and make a smarter decision.</p>
+        <div class="hero-points">
+          <span><b>✓</b> Structure-based checks</span>
+          <span><b>✓</b> Explainable findings</span>
+          <span><b>✓</b> No automatic link opening</span>
+        </div>
+      </div>
+      <div class="visual" aria-label="Illustration of a digital security globe">
+        <div class="visual-panel">
+          <div class="dot-field"></div>
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="globe">
+            <div class="globe-grid vertical-one"></div><div class="globe-grid vertical-two"></div>
+            <div class="globe-grid horizontal-one"></div><div class="globe-grid horizontal-two"></div>
+            <div class="globe-glow"></div>
+            <div class="shield">
+              <svg viewBox="0 0 72 82" role="img" aria-label="Shield with check mark">
+                <path d="M36 4 63 15v21c0 18-12 31-27 41C21 67 9 54 9 36V15L36 4Z" fill="#087aa5" stroke="#27c8d4" stroke-width="2.5"/>
+                <path d="m23 40 9 9 18-21" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <span class="orbit-point point-one"></span><span class="orbit-point point-two"></span><span class="orbit-point point-three"></span>
+        </div>
+        <div class="visual-caption"><span class="live-dot"></span> DIGITAL LINK INSPECTION</div>
+      </div>
+    </section>
+
+    <section class="analyzer-card">
+      <div class="card-topline"></div>
+      <div class="analyzer-heading">
+        <div class="heading-icon">↗</div>
+        <div class="heading-copy">
+          <div class="section-kicker">01 / URL INSPECTION</div>
+          <h2>Analyze a suspicious link</h2>
+          <p>Enter a URL to inspect its structure and identify potential warning signs.</p>
+        </div>
+        <div class="scan-label">SCAN <b>01</b></div>
+      </div>
+      <form id="analyzeForm">
+        <label class="visually-hidden" for="urlInput">Website URL</label>
+        <div class="input-row">
+          <span class="input-symbol">↗</span>
+          <input id="urlInput" name="url" type="text" placeholder="https://example.com/login" autocomplete="url" required>
+          <button id="analyzeButton" type="submit">Analyze URL <span>⟶</span></button>
+        </div>
+        <div class="form-footnote"><span>◇</span> Your submitted URL is inspected structurally and is not automatically opened.<span class="https-note">HTTPS alone does not guarantee safety.</span></div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="report" class="report" hidden aria-live="polite">
+        <div class="report-divider"></div>
+        <div class="report-header"><div><div class="section-kicker">ANALYSIS REPORT</div><h2 id="riskTitle">Risk overview</h2></div><div id="scoreBadge" class="score-badge">Score: —</div></div>
+        <p id="summary" class="report-summary"></p>
+        <div class="report-columns">
+          <div class="report-panel"><h3>What we noticed</h3><ul id="findings"></ul></div>
+          <div class="report-panel"><h3>Recommended next steps</h3><ul id="recommendations"></ul></div>
+        </div>
+        <p id="limitations" class="limitations"></p>
+        <p id="meta" class="meta"></p>
+      </section>
+    </section>
+
+    <section class="features">
+      <article class="feature-card"><div class="feature-icon icon-blue">⌕</div><h3>URL intelligence</h3><p>Checks for common URL patterns that may deserve a closer look.</p></article>
+      <article class="feature-card"><div class="feature-icon icon-teal">◎</div><h3>Explainable findings</h3><p>See the reasons behind the result instead of a mysterious label.</p></article>
+      <article class="feature-card"><div class="feature-icon icon-purple">♧</div><h3>Privacy by design</h3><p>The analyzer checks the address you enter. It does not automatically visit the website.</p></article>
+    </section>
+  </main>
+
+  <footer><span class="footer-brand">TRUSTRA</span><span>Think before you click.</span><span class="footer-note">A first-pass check, not a guarantee.</span></footer>
+  <script src="./app.js"></script>
+</body>
+</html>
